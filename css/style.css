@@ -5,7 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  list-style: none;
+  /* list-style: none; */
 }
 
 /* root variable */
@@ -86,5 +86,52 @@ h2{
   }
   .btn-block{
     font-size: 2rem;
+  }
+}
+
+/* Badge */
+.badge{
+  display: inline-block;
+  padding: .5rem 1.3rem;
+  border-radius: 32px;
+  text-transform: uppercase;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  font-size: 1.2rem;
+}
+.badge-primary{
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+@media screen and (min-width:1024px) {
+  .badge{
+    font-size: 1.4rem;
+  }
+}
+
+/* List */
+.list{
+  list-style: none;
+  font-size: 1.6rem;
+}
+.list--inline .list__item{
+  display: inline-block;
+  margin-left: 2rem;
+}
+.list--tick .list__item::before{
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url("../assets/icons/Tick\ Square\ -\ 1.svg") no-repeat;
+  padding-right: 3rem;
+}
+.list--tick .list__item{
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width:1024px) {
+  .list--tick .list__item{
+    font-size: 1.8rem;
+    margin-bottom: 10rem;
   }
 }
