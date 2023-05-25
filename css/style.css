@@ -11,6 +11,7 @@
 /* root variable */
 :root{
   --color-primary:#ff5722;
+  --color-primary-light:#ff7a50;
   --color-secondary-light:#fff6f2;
   --color-secondary-dark:#ffa589;
   --color-navbar:#f8f8f8;
@@ -100,7 +101,7 @@ h2{
   color: var(--color-primary);
   font-size: 1.2rem;
 }
-.badge-primary{
+.badge--primary{
   background-color: var(--color-primary);
   color: var(--color-white);
 }
@@ -134,4 +135,53 @@ h2{
     font-size: 1.8rem;
     margin-bottom: 10rem;
   }
+}
+
+/* Plan */
+.block-plan{
+  display: grid;
+  gap: 2rem 3rem;
+}
+.plan{
+  max-width: 500px;
+}
+.plan__introduction{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.plan__price{
+  font-size: 3rem;
+}
+.plan__billing-cycle{
+  font-size: 1.4rem;
+}
+.plan__description{
+  display: block;
+  margin-top: 1.5rem;
+}
+@media screen and (min-width:1024px) {
+  .block-plan{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.card{
+  border-radius: 20px;
+  overflow: hidden;
+  font-size: 1.8rem;
+  box-shadow: 0 0 20px 10px #e9e4e4;
+}
+.card--primary .card__header{
+  background-color: var(--color-primary-light);
+}
+.card--secondary .card__header{
+  background-color: var(--color-secondary-dark);
+}
+.card__header, .card__body{
+  padding: 3rem 2.5rem;
+}
+.card__header{
+  background-color: var(--color-secondary-dark);
+  color: var(--color-white);
 }
