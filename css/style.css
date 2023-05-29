@@ -39,11 +39,13 @@ h1{
 }
 h2{
   font-size: 2.2rem;
+  margin-bottom: 2rem;
 }
 
 @media screen and (min-width:1024px) {
   body{
     font-size: 1.8rem;
+    line-height: 1.7;
   }
   h1{
     font-size: 5rem;
@@ -207,4 +209,40 @@ h2{
 /* Container */
 .container{
   margin: 0 auto;
+  max-width: 1140px;
+}
+
+/* Feature */
+.feature{
+  display: grid;
+}
+.feature__text{
+  margin-bottom: 2rem;
+}
+.feature__image{
+  display: flex;
+  justify-content: center;
+}
+.feature__image > img{
+  width: 70%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+.feature .btn{
+  padding: 1.2rem 3rem;
+}
+@media screen and (min-width:1024px) {
+  .feature{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .feature__image{
+    order: 2;
+    margin-bottom: 0;
+  }
+  .feature__detail{
+    order: 1;
+  }
+  .feature__image > img{
+    width: 80%;
+  }
 }
